@@ -11,7 +11,7 @@ export default defineConfig({
 			"/api": {
 				target: "https://nlstar.com/ru/api/catalog3/v1",
 				changeOrigin: true,
-				rewrite: (path) => path.replace(/^\/api/, ""),
+				rewrite: path => path.replace(/^\/api/, ""),
 			},
 		},
 	},

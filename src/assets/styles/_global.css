@@ -14,3 +14,9 @@ body {
 		font-size: 14px;
 	}
 }
+
+button {
+	cursor: pointer;
+	border: none;
+	padding: 0;
+}
