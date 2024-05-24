@@ -1,89 +1,89 @@
 @font-face {
 	font-family: "Futura PT";
-	src: url("FuturaPT-Medium.eot");
-	src: local("Futura PT Medium"), local("FuturaPT-Medium"), url("FuturaPT-Medium.eot?#iefix") format("embedded-opentype"), url("FuturaPT-Medium.woff") format("woff"),
-		url("FuturaPT-Medium.ttf") format("truetype");
+	src: url("../fonts/FuturaPT-Medium.eot");
+	src: local("Futura PT Medium"), local("FuturaPT-Medium"), url("../fonts/FuturaPT-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Medium.woff") format("woff"),
+		url("../fonts/FuturaPT-Medium.ttf") format("truetype");
 	font-weight: 500;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Futura PT";
-	src: url("FuturaPT-MediumObl.eot");
-	src: local("Futura PT Medium Oblique"), local("FuturaPT-MediumObl"), url("FuturaPT-MediumObl.eot?#iefix") format("embedded-opentype"), url("FuturaPT-MediumObl.woff") format("woff"),
-		url("FuturaPT-MediumObl.ttf") format("truetype");
+	src: url("../fonts/FuturaPT-MediumObl.eot");
+	src: local("Futura PT Medium Oblique"), local("FuturaPT-MediumObl"), url("../fonts/FuturaPT-MediumObl.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-MediumObl.woff") format("woff"),
+		url("../fonts/FuturaPT-MediumObl.ttf") format("truetype");
 	font-weight: 500;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: "Futura PT Cond";
-	src: url("FuturaPTCond-Medium.eot");
-	src: local("Futura PT Cond Medium"), local("FuturaPTCond-Medium"), url("FuturaPTCond-Medium.eot?#iefix") format("embedded-opentype"), url("FuturaPTCond-Medium.woff") format("woff"),
-		url("FuturaPTCond-Medium.ttf") format("truetype");
+	src: url("../fonts/FuturaPTCond-Medium.eot");
+	src: local("Futura PT Cond Medium"), local("FuturaPTCond-Medium"), url("../fonts/FuturaPTCond-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPTCond-Medium.woff") format("woff"),
+		url("../fonts/FuturaPTCond-Medium.ttf") format("truetype");
 	font-weight: 500;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Futura PT Book";
-	src: url("FuturaPT-Book.eot");
-	src: local("Futura PT Book"), local("FuturaPT-Book"), url("FuturaPT-Book.eot?#iefix") format("embedded-opentype"), url("FuturaPT-Book.woff") format("woff"),
-		url("FuturaPT-Book.ttf") format("truetype");
+	src: url("../fonts/FuturaPT-Book.eot");
+	src: local("Futura PT Book"), local("FuturaPT-Book"), url("../fonts/FuturaPT-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Book.woff") format("woff"),
+		url("../fonts/FuturaPT-Book.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Futura PT Book";
-	src: url("FuturaPT-BookObl.eot");
-	src: local("Futura PT Book Oblique"), local("FuturaPT-BookObl"), url("FuturaPT-BookObl.eot?#iefix") format("embedded-opentype"), url("FuturaPT-BookObl.woff") format("woff"),
-		url("FuturaPT-BookObl.ttf") format("truetype");
+	src: url("../fonts/FuturaPT-BookObl.eot");
+	src: local("Futura PT Book Oblique"), local("FuturaPT-BookObl"), url("../fonts/FuturaPT-BookObl.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-BookObl.woff") format("woff"),
+		url("../fonts/FuturaPT-BookObl.ttf") format("truetype");
 	font-weight: normal;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: "Futura PT Demi";
-	src: url("FuturaPT-DemiObl.eot");
-	src: local("Futura PT Demi Oblique"), local("FuturaPT-DemiObl"), url("FuturaPT-DemiObl.eot?#iefix") format("embedded-opentype"), url("FuturaPT-DemiObl.woff") format("woff"),
-		url("FuturaPT-DemiObl.ttf") format("truetype");
+	src: url("../fonts/FuturaPT-DemiObl.eot");
+	src: local("Futura PT Demi Oblique"), local("FuturaPT-DemiObl"), url("../fonts/FuturaPT-DemiObl.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-DemiObl.woff") format("woff"),
+		url("../fonts/FuturaPT-DemiObl.ttf") format("truetype");
 	font-weight: 600;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: "Futura PT Demi";
-	src: url("FuturaPT-Demi.eot");
-	src: local("Futura PT Demi"), local("FuturaPT-Demi"), url("FuturaPT-Demi.eot?#iefix") format("embedded-opentype"), url("FuturaPT-Demi.woff") format("woff"),
-		url("FuturaPT-Demi.ttf") format("truetype");
+	src: url("../fonts/FuturaPT-Demi.eot");
+	src: local("Futura PT Demi"), local("FuturaPT-Demi"), url("../fonts/FuturaPT-Demi.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPT-Demi.woff") format("woff"),
+		url("../fonts/FuturaPT-Demi.ttf") format("truetype");
 	font-weight: 600;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Futura PT Cond Book";
-	src: url("FuturaPTCond-Book.eot");
-	src: local("Futura PT Cond Book"), local("FuturaPTCond-Book"), url("FuturaPTCond-Book.eot?#iefix") format("embedded-opentype"), url("FuturaPTCond-Book.woff") format("woff"),
-		url("FuturaPTCond-Book.ttf") format("truetype");
+	src: url("../fonts/FuturaPTCond-Book.eot");
+	src: local("Futura PT Cond Book"), local("FuturaPTCond-Book"), url("../fonts/FuturaPTCond-Book.eot?#iefix") format("embedded-opentype"), url("../fonts/FuturaPTCond-Book.woff") format("woff"),
+		url("../fonts/FuturaPTCond-Book.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
 	font-family: "Futura PT Cond";
-	src: url("FuturaPTCond-MediumObl.eot");
-	src: local("Futura PT Cond Medium Oblique"), local("FuturaPTCond-MediumObl"), url("FuturaPTCond-MediumObl.eot?#iefix") format("embedded-opentype"), url("FuturaPTCond-MediumObl.woff") format("woff"),
-		url("FuturaPTCond-MediumObl.ttf") format("truetype");
+	src: url("../fonts/FuturaPTCond-MediumObl.eot");
+	src: local("Futura PT Cond Medium Oblique"), local("FuturaPTCond-MediumObl"), url("../fonts/FuturaPTCond-MediumObl.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/FuturaPTCond-MediumObl.woff") format("woff"), url("../fonts/FuturaPTCond-MediumObl.ttf") format("truetype");
 	font-weight: 500;
 	font-style: italic;
 }
 
 @font-face {
 	font-family: "Futura PT Cond Book";
-	src: url("FuturaPTCond-BookObl.eot");
-	src: local("Futura PT Cond Book Oblique"), local("FuturaPTCond-BookObl"), url("FuturaPTCond-BookObl.eot?#iefix") format("embedded-opentype"), url("FuturaPTCond-BookObl.woff") format("woff"),
-		url("FuturaPTCond-BookObl.ttf") format("truetype");
+	src: url("../fonts/FuturaPTCond-BookObl.eot");
+	src: local("Futura PT Cond Book Oblique"), local("FuturaPTCond-BookObl"), url("../fonts/FuturaPTCond-BookObl.eot?#iefix") format("embedded-opentype"),
+		url("../fonts/FuturaPTCond-BookObl.woff") format("woff"), url("../fonts/FuturaPTCond-BookObl.ttf") format("truetype");
 	font-weight: normal;
 	font-style: italic;
 }
