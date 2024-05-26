@@ -129,5 +129,6 @@
 		font-size: 1.125rem;
 		line-height: 1.5rem;
 		min-height: 2.5rem;
+		text-transform: none;
 	}
 </style>
