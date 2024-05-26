@@ -1,5 +1,5 @@
-import axios from "axios";
+import axiosInstance from "./instance";
 
 export function getProductsQuery(slug, city_id) {
-	return axios.get(`/api/menutags/${slug}`, { params: { city_id } });
+	return axiosInstance.get(`/api/menutags/${slug}`, { params: { city_id } });
 }

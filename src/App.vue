@@ -18,7 +18,7 @@
 		},
 		mounted() {
 			this.loadCity();
-			this.categoryStore.category.length <= 0 ? this.categoryStore.getCategory() : 0;
+			this.categoryStore.category?.length <= 0 ? this.categoryStore.getCategory() : 0;
 		},
 		watch: {
 			isOpen: {
