@@ -10,7 +10,7 @@
 						src="/images/destination.svg"
 						alt="destination"
 					/>
-					<p class="header__city-text">Москва</p>
+					<p class="header__city-text">{{ cityStore.city.city }}</p>
 				</div>
 			</div>
 		</div>
@@ -38,6 +38,11 @@
 
 <style scoped>
 	.header {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 10;
 		height: 4.5rem;
 		background-color: #fff;
 		box-shadow: 0 2px 4px 0 rgba(39, 39, 39, 0.1);

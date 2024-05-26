@@ -1,7 +1,10 @@
 <template>
-	<div class="category__card">
+	<router-link
+		:to="to"
+		class="category__card"
+	>
 		<p
-			:color="textColor"
+			:style="{ color: textColor }"
 			class="category__card-title"
 		>
 			{{ name }}
@@ -11,15 +14,18 @@
 			:alt="name"
 			class="category__card-bg"
 		/>
-	</div>
+	</router-link>
 </template>
 
 <script>
+	import { RouterLink } from "vue-router";
+
 	export default {
 		props: {
 			name: String,
 			image: String,
 			textColor: String,
+			to: String,
 		},
 	};
 </script>

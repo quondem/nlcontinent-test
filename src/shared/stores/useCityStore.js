@@ -2,21 +2,40 @@ import { defineStore } from "pinia";
 import { getCityQuery, findCityQuery } from "@api/city";
 
 export const useCityStore = defineStore("city", {
-	state: () => ({ city: {}, isOpen: false, suggestions: [] }),
-	getters: {},
+	state: () => ({ term: "", city: {}, isOpen: false, suggestions: [], choosenSuggestion: null }),
+	getters: {
+		isValidChoosen() {
+			return this.choosenSuggestion?.label == this.term;
+		},
+	},
 	actions: {
-		async loadCityId() {
-			let localCity = localStorage.getItem("city");
+		async loadCity() {
+			let localCity = await JSON.parse(localStorage.getItem("city"));
 			if (localCity) {
 				this.city = localCity;
 			} else {
-				this.chooseCity(1);
+				this.chooseCityById(1);
 			}
 		},
-		async chooseCity(id) {
+		resetTerm() {
+			this.term = "";
+			this.choosenSuggestion = null;
+		},
+		async chooseSuggestion(city) {
+			this.choosenSuggestion = city;
+			this.term = city.label;
+			this.suggestions = [];
+		},
+		async chooseCityById(id) {
 			let { data } = await getCityQuery(id);
-			this.city = data;
-			localStorage.setItem("city", data);
+			this.city = data.data;
+			console.log(this.city);
+			localStorage.setItem("city", JSON.stringify(data));
+		},
+		async chooseCity(city) {
+			this.city = city;
+			localStorage.setItem("city", JSON.stringify(city));
+			this.resetTerm();
 		},
 		async findCity(name) {
 			if (name?.length > 2) {

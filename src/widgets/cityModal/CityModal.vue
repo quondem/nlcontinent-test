@@ -14,7 +14,17 @@
 				<h2 class="modal__title">Выбор населённого пункта:</h2>
 				<div class="city">
 					<Search />
-					<Button class="city__button">Подтвердить</Button>
+					<Button
+						:disabled="!cityStore.isValidChoosen"
+						@click="
+							() => {
+								cityStore.chooseCity(cityStore.choosenSuggestion);
+								cityStore.isOpen = false;
+							}
+						"
+						class="city__button"
+						>Подтвердить</Button
+					>
 				</div>
 			</div>
 			<div
@@ -46,6 +56,9 @@
 	.city {
 		display: flex;
 		gap: 0.875rem;
+		@media (max-width: 560px) {
+			flex-direction: column;
+		}
 	}
 	.city__button {
 		font-size: 1rem;

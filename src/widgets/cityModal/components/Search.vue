@@ -1,7 +1,7 @@
 <template>
 	<div class="search">
 		<input
-			v-model="text"
+			v-model="term"
 			:class="{ search__input_suggestions: cityStore.suggestions.length > 0 }"
 			placeholder="Например, Санкт-петербург"
 			type="text"
@@ -15,13 +15,13 @@
 				v-for="suggestion in cityStore.suggestions"
 				:key="suggestion"
 				class="search__suggestion"
-				@click="cityStore.chooseCity(suggestion)"
+				@click="cityStore.chooseSuggestion(suggestion)"
 			>
 				{{ suggestion.label }}
 			</div>
 		</div>
 		<button
-			@click="text = ''"
+			@click="cityStore.resetTerm"
 			class="search__close"
 		>
 			<img
@@ -33,24 +33,24 @@
 </template>
 
 <script>
-	import { mapActions, mapStores } from "pinia";
+	import { mapState, mapStores, mapWritableState } from "pinia";
 	import { useCityStore } from "@stores/useCityStore.js";
 	import { debounce } from "@utils/debounce";
 
 	export default {
+		computed: {
+			...mapStores(useCityStore),
+			...mapWritableState(useCityStore, ["term"]),
+		},
 		data() {
 			return {
-				text: "",
 				debouncedFindCity: debounce(text => {
-					this.cityStore.findCity(this.text);
+					this.cityStore.findCity(this.term);
 				}, 300),
 			};
 		},
-		computed: {
-			...mapStores(useCityStore),
-		},
 		watch: {
-			text: {
+			term: {
 				immediate: true,
 				handler(newValue) {
 					this.debouncedFindCity(newValue);
@@ -76,6 +76,7 @@
 		line-height: 1.4375rem;
 		color: var(--black-gray);
 		position: relative;
+		transition: all 0.1s ease;
 		&:focus {
 			border: 1px solid var(--black-gray);
 		}
@@ -88,15 +89,17 @@
 		}
 	}
 	.search__input_suggestions:focus + .search__suggestions {
-		display: flex;
+		opacity: 1;
 	}
 	.search__suggestions {
-		display: none;
+		transition: all 0.1s ease;
+		opacity: 0;
+		display: flex;
 		flex-direction: column;
 		gap: 0.4375rem;
 		padding: 0.75rem;
 		position: absolute;
-		bottom: 1px;
+		bottom: 0.1875rem;
 		z-index: 13;
 		left: 0;
 		right: 0;
@@ -105,7 +108,7 @@
 		background-color: #fff;
 		font-size: 1.125rem;
 		line-height: 1.5rem;
-		color: #979797;
+		color: var(--gray);
 		border-left: 0.0625rem solid #272727;
 		border-right: 0.0625rem solid #272727;
 		border-bottom: 0.0625rem solid #272727;
