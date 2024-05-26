@@ -1,26 +1,38 @@
 <template>
-	<div class="header">
+	<header class="header">
 		<div class="container">
 			<div class="header__wrapper">
-				<div class="header__city">
+				<div
+					@click="cityStore.$patch({ isOpen: true })"
+					class="header__city"
+				>
 					<img
 						src="/images/destination.svg"
 						alt="destination"
 					/>
-					<div class="header__city-text">Москва</div>
+					<p class="header__city-text">Москва</p>
 				</div>
 			</div>
 		</div>
-		<CityModal></CityModal>
-	</div>
+		<CityModal v-if="cityStore.isOpen"></CityModal>
+	</header>
 </template>
 
 <script>
-	import CityModal from "@widgets/CityModal.vue";
+	import { mapStores, mapState } from "pinia";
+	import { useCityStore } from "@stores/useCityStore.js";
+	import CityModal from "@widgets/cityModal/CityModal.vue";
 	export default {
 		components: {
 			CityModal,
 		},
+		data() {
+			return {};
+		},
+		computed: {
+			...mapStores(useCityStore),
+		},
+		watch: {},
 	};
 </script>
 
@@ -31,6 +43,7 @@
 		box-shadow: 0 2px 4px 0 rgba(39, 39, 39, 0.1);
 		display: flex;
 		align-items: center;
+		margin-bottom: 2.1875rem;
 	}
 	.header__wrapper {
 		height: 100%;

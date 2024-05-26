@@ -22,6 +22,7 @@ export default defineConfig({
 			"@widgets": path.resolve(__dirname, "./src/widgets"),
 			"@pages": path.resolve(__dirname, "./src/pages"),
 			"@ui": path.resolve(__dirname, "./src/shared/ui"),
+			"@utils": path.resolve(__dirname, "./src/shared/utils"),
 			"@api": path.resolve(__dirname, "./src/shared/api"),
 			"@stores": path.resolve(__dirname, "./src/shared/stores"),
 		},

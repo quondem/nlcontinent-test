@@ -1,45 +1,25 @@
 <script>
-	import { mapStores } from "pinia";
-	import { useCategoryStore } from "@stores/useCategoryStore";
+	import Header from "@widgets/Header.vue";
+	import { mapActions } from "pinia";
+	import { useCityStore } from "@stores/useCityStore";
+	import { RouterView } from "vue-router";
 
 	export default {
-		computed: {
-			...mapStores(useCategoryStore),
+		components: {
+			Header,
+		},
+		methods: {
+			...mapActions(useCityStore, ["loadCityId"]),
 		},
 		mounted() {
-			this.categoryStore.getCategory();
+			this.loadCityId();
 		},
 	};
 </script>
 
 <template>
-	<div class="container">
-		<h2 class="category__title">Категории товаров</h2>
-		<div class="category__cards">
-			<div
-				v-for="tag in this.categoryStore?.category"
-				class="category__card"
-			>
-				<p class="category__card-title">{{ tag.name }}</p>
-				<img
-					:src="tag.image"
-					alt=""
-					class="category__card-bg"
-				/>
-			</div>
-		</div>
-	</div>
+	<Header></Header>
+	<RouterView />
 </template>
 
-<style scoped>
-	.category__cards {
-		display: flex;
-		flex-wrap: wrap;
-		gap: 1.375rem;
-	}
-	.category__card {
-		max-width: 16.9375rem;
-		width: 100%;
-		border-radius: 0.3125rem;
-	}
-</style>
+<style scoped></style>

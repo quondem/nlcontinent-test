@@ -11,7 +11,7 @@ export const useCategoryStore = defineStore("category", {
 	},
 	actions: {
 		async getCategory() {
-			let { data } = await getCategoryQuery(this.cityStore.id);
+			let { data } = await getCategoryQuery(this.cityStore.city.id);
 			this.category = data.tags;
 		},
 	},

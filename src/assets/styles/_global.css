@@ -20,3 +20,11 @@ button {
 	border: none;
 	padding: 0;
 }
+
+.title {
+	font-weight: 600;
+	font-size: 2.75rem;
+	line-height: 2.75rem;
+	color: var(--black-gray);
+	margin-bottom: 1.25rem;
+}
