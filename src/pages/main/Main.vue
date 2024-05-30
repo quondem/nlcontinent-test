@@ -7,7 +7,7 @@
 			<h2 class="category__title title">Категории товаров</h2>
 			<div class="category__cards">
 				<Card
-					@click="productStore.products = []"
+					@click="productStore.products = null"
 					v-for="tag in this.categoryStore?.category"
 					:name="tag.name"
 					:image="tag.image"

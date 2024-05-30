@@ -55,17 +55,11 @@
 				}).format(+amount);
 			},
 		},
-		watch: {
-			city: {
-				handler() {
-					this.productStore.getProducts();
-				},
-			},
-		},
 		mounted() {
 			this.productStore.slug = this.$route.params?.slug;
 			this.productStore.filter = this.$route.params?.subcategorySlug;
-			if (this.productStore.products.length == 0) {
+			console.log(this.productStore.products);
+			if (this.productStore.products == null) {
 				this.productStore.getProducts();
 			}
 		},

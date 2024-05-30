@@ -66,6 +66,7 @@
 			city: {
 				handler(value) {
 					this.categoryStore.getCategory();
+					this.productStore.getProducts();
 				},
 			},
 		},
